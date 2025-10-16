@@ -1,0 +1,40 @@
+﻿@model List<JadooTravel.Dtos.DestinationDtos.ResultDestinationDto>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Tour City Country</th>
+            <th>Tour Price</th>
+            <th>Tour Capacity</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.CityCountry</td>
+                <td>@item.Price</td>
+                <td>@item.Capacity</td>
+                <td><a href="/Destination/DeleteDestination/@item.DestinationId" class="btn btn-danger">Delete</a></td>
+                <td><a href="/Destination/UpdateDestination/@item.DestinationId" class="btn btn-success">Update</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Destination/CreateDestination/" class="btn btn-info">Create New Tour</a>
+
+</div>

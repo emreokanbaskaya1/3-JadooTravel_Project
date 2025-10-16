@@ -1,0 +1,26 @@
+﻿@model JadooTravel.Dtos.CategoryDtos.GetCategoryByIdDto
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <br />
+
+    <form method="post">
+        <input type="hidden" asp-for="CategoryId"/>
+        <input type="text" asp-for="CategoryName" placeholder="Enter Category Name" class="form-control" />
+        <br />
+        <input type="text" asp-for="Description" placeholder="Enter Category Name" class="form-control" />
+        <br />
+        <input type="text" asp-for="IconUrl" placeholder="Enter Category Name" class="form-control" />
+        <br />
+        <input type="text" asp-for="Status" placeholder="Enter Category Name" class="form-control" />
+        <br />
+        <button class="btn btn-success">Update Category</button>
+    </form>
+
+</div>

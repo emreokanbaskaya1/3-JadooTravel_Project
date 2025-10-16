@@ -1,0 +1,40 @@
+@model List<JadooTravel.Dtos.TripPlanDtos.ResultTripPlanDto>
+@{
+    ViewData["Title"] = "TripPlanList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Icon Url</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.IconUrl</td>
+                <td><a href="/TripPlan/DeleteTripPlan/@item.TripPlanId" class="btn btn-danger">Delete</a></td>
+                <td><a href="/TripPlan/UpdateTripPlan/@item.TripPlanId" class="btn btn-success">Update</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/TripPlan/CreateTripPlan" class="btn btn-info">Create New Trip Plan</a>
+
+</div>

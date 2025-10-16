@@ -1,0 +1,120 @@
+{
+  "navbar": {
+    "services": "Hizmetlerimiz",
+    "locations": "Lokasyonlar", 
+    "reservation": "Rezervasyon",
+    "testimonials": "Yorumlar",
+    "login": "Giriş Yap",
+    "getInfo": "Bilgi Al",
+    "language": "Dil"
+  },
+  
+  "hero": {
+    "welcome": "Yıldızlararası Yolculuklara Hoş Geldiniz",
+    "title": "Evreni Keşfedin, Yeni Dünyalar Bulun",
+    "description": "Sıfır yerçekimini deneyimleyin, nefes kesici gezegenleri yörüngede dolaşın ve kozmosin güzelliğine yakından tanık olun.",
+    "watchButton": "Geleceği İzle"
+  },
+  
+  "services": {
+    "category": "KATEGORİ",
+    "title": "En İyi Hizmetleri Sunuyoruz",
+    "weatherForecast": {
+      "title": "Uzay Hava Durumu Tahmini",
+      "description": "Güneş fırtınalarından asteroid faaliyetlerine kadar gerçek zamanlı kozmik hava raporlarıyla güvende kalın."
+    },
+    "orbitalHotels": {
+      "title": "Yörünge Otelleri", 
+      "description": "Dünya ve yıldızların nefes kesici manzaralarına sahip lüks yörünge otellerinde kalın. Sıfır yerçekimi yemekleri, gökyüzü salonları ve daha fazlası."
+    },
+    "planetaryExploration": {
+      "title": "Gezegen Keşfi",
+      "description": "Yeni dünyalara adım atın, egzotik arazileri keşfedin ve kozmik hediyelikler toplayın."
+    },
+    "cosmicEntertainment": {
+      "title": "Kozmik Eğlence",
+      "description": "Sıfır yerçekimi konserlerinden holografik tiyatrolara kadar uzayda daha önce hiç olmadığı gibi eğlence deneyimi yaşayın."
+    }
+  },
+  
+  "destinations": {
+    "subtitle": "En Çok Satan",
+    "title": "Popüler Destinasyonlar",
+    "moonBase": {
+      "name": "Ay Üssü Alpha",
+      "duration": "5 Gece 6 Gün",
+      "price": "150.000 TL",
+      "description": "Ay'da yürüyün, ay araçları kullanın ve ilk lüks Ay üssünde kalın."
+    },
+    "marsColony": {
+      "name": "Mars Koloni Ziyareti", 
+      "duration": "3 Gece 4 Gün",
+      "price": "500.000 TL",
+      "description": "Mars habitatlarını keşfedin, Olympus Mons üzerinde gün batımına tanık olun ve Kızıl Gezegen macerasına katılın."
+    },
+    "spaceStation": {
+      "name": "Uzay İstasyonu Gezisi",
+      "duration": "4 Gece 5 Gün", 
+      "price": "800.000 TL",
+      "description": "Yörünge otellerinin keyfini çıkarın, sıfır yerçekimi yemekleri ve uzaydan Dünya'nın panoramik manzarası."
+    }
+  },
+  
+  "booking": {
+    "easyFast": "Kolay ve Hızlı",
+    "title": "Bir sonraki seyahatinizi 3 kolay adımda rezerve edin",
+    "tripPlans": {
+      "orbitalHotelStay": {
+        "title": "Yörünge Otel Konaklaması",
+        "description": "Dünya'nın panoramik manzaralarına sahip lüks yörünge otelinde 3 gece keyfini çıkarın."
+      },
+      "moonWalkExperience": {
+        "title": "Ay Yürüyüşü Deneyimi", 
+        "description": "Ay'ın yüzeyine adım atın ve rehberli görevlerde ay araçları kullanın."
+      },
+      "nebulaSightseeingCruise": {
+        "title": "Nebula Gezi Turu",
+        "description": "Renkli nebulalarda bir haftalık yıldızlararası gemi yolculuğuna çıkın. Panoramik gözlem güvertelerinin, sıfır yerçekimi salonlarının ve kozmik fotoğraf turlarının keyfini çıkarın."
+      }
+    },
+    "form": {
+      "title": "Rezervasyon Yapın",
+      "fullName": "Ad Soyad",
+      "phone": "Telefon Numarası", 
+      "email": "E-posta Adresi",
+      "notes": "Ek Notlar",
+      "date": "Rezervasyon Tarihi",
+      "bookNow": "Şimdi Rezerve Et"
+    }
+  },
+  
+  "testimonials": {
+    "subtitle": "Yorumlar",
+    "title": "İnsanlar Hakkımızda Ne Diyor."
+  },
+  
+  "ai": {
+    "description": "Bir gezegen girin, yapay zeka ziyaret edilecek yerleri önerecek",
+    "button": "Gezegen Keşfini Başlat"
+  },
+  
+  "footer": {
+    "company": "Şirketimiz",
+    "about": "Hakkımızda", 
+    "careers": "Kariyer",
+    "mobile": "Mobil",
+    "contact": "İletişim",
+    "helpFaq": "Yardım/SSS",
+    "press": "Basın", 
+    "affiliates": "İş Ortakları",
+    "more": "Daha Fazla",
+    "airlineFees": "Havayolu ücretleri",
+    "airline": "Havayolu", 
+    "lowFareTips": "Düşük ücret ipuçları",
+    "discoverApp": "Uygulamamızı keşfedin",
+    "copyright": "Tüm Hakları Saklıdır | Jadoo Travel"
+  }
+}
+
+
+

@@ -1,0 +1,31 @@
+@model JadooTravel.Dtos.ReservationDtos.CreateReservationDto
+
+@{
+    ViewData["Title"] = "CreateReservation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <br />
+
+    <form method="post">
+        <input type="text" asp-for="FullName" placeholder="Enter Full Name" class="form-control" />
+        <br />
+        <input type="tel" asp-for="Telephone" placeholder="Enter Telephone" class="form-control" />
+        <br />
+        <input type="email" asp-for="Email" placeholder="Enter Email" class="form-control" />
+        <br />
+        <textarea asp-for="Notes" placeholder="Enter Notes" rows="3" class="form-control"></textarea>
+        <br />
+        <input type="datetime-local" asp-for="ReservationDate" class="form-control" />
+        <br />
+       
+       
+        <br />
+        <button class="btn btn-primary">Add Reservation</button>
+    </form>
+
+</div>

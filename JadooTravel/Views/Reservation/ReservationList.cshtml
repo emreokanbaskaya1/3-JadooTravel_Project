@@ -1,0 +1,46 @@
+﻿@model List<JadooTravel.Dtos.ReservationDtos.ResultReservationDto>
+
+@{
+    ViewData["Title"] = "ReservationList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Full Name</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Notes</th>
+            <th>Date</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.FullName</td>
+                <td>@item.Telephone</td>
+                <td>@item.Email</td>
+                <td>@item.Notes</td>
+                <td>@item.ReservationDate.ToString("dd/MM/yyyy")</td>
+                <td><a href="/Reservation/DeleteReservation/@item.ReservationId" class="btn btn-danger">Delete</a></td>
+                <td><a href="/Reservation/UpdateReservation/@item.ReservationId" class="btn btn-success">Update</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Reservation/CreateReservation/" class="btn btn-info">Create New Reservation</a>
+
+</div>

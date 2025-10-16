@@ -1,0 +1,44 @@
+@model List<JadooTravel.Dtos.TestimonialDtos.ResultTestimonialDto>
+@{
+    ViewData["Title"] = "TestimonialList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <th>Title</th>
+            <th>Comment</th>
+            <th>Rating</th>
+            <th>Date</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.UserName</td>
+                <td>@item.Title</td>
+                <td>@item.Comment</td>
+                <td>@item.Rating</td>
+                <td>@item.Date.ToString("dd/MM/yyyy")</td>
+                <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-danger">Delete</a></td>
+                <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-success">Update</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Testimonial/CreateTestimonial" class="btn btn-info">Create New Testimonial</a>
+
+</div>

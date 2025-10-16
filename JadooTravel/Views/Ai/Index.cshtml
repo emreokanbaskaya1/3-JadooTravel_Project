@@ -1,0 +1,370 @@
+﻿@{
+    ViewData["Title"] = "Jadoo AI Planet Guide";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Volkhov:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #212529;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+        }
+
+        .header-section .logo {
+            font-size: 4rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .header-section .app-title {
+            font-family: 'Volkhov', serif;
+            font-weight: 700;
+            font-size: 3.5rem;
+            color: #212529;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .header-section .app-subtitle {
+            font-size: 1.25rem;
+            color: #5e6282;
+            margin: 0 auto;
+            max-width: 700px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .card-main, .result-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 1px solid #f1f3f4;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-main:hover, .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        .card-header h3, .card-header h4 {
+            margin: 0;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 1.5rem;
+        }
+
+        .card-body {
+            padding: 2.5rem;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e9ecef;
+            font-size: 1rem;
+            background: #fff;
+            color: #212529;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control::placeholder {
+            color: #6c757d;
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            outline: none;
+        }
+
+        .input-group-text {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-right: none;
+            color: #667eea;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .form-control.border-start-0 {
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+
+        .places-list {
+            padding: 0;
+            margin: 0;
+        }
+
+        .place-item {
+            padding: 2rem;
+            border-bottom: 1px solid #f1f3f4;
+            transition: all 0.3s ease;
+        }
+
+        .place-item:last-child {
+            border-bottom: none;
+        }
+
+        .place-item:hover {
+            background: rgba(102, 126, 234, 0.05);
+            transform: translateX(10px);
+        }
+
+        .place-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.5rem;
+        }
+
+        .place-desc {
+            color: #5e6282;
+            line-height: 1.6;
+            padding-left: 2.5rem;
+            font-size: 1rem;
+        }
+
+        .alert-danger {
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: none;
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .loading-spinner .spinner-border {
+            width: 4rem;
+            height: 4rem;
+            color: #667eea;
+        }
+
+        .loading-spinner p {
+            margin-top: 1rem;
+            color: #5e6282;
+            font-weight: 500;
+        }
+
+        /* Navigation Style similar to default */
+        .navbar-section {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .navbar-brand {
+            font-family: 'Volkhov', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #212529;
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: #5e6282;
+            font-weight: 500;
+            padding: 0.75rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #667eea;
+        }
+
+        /* Footer styling */
+        .footer-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .footer-text {
+            color: #5e6282;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-section">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-plane-departure me-2"></i>
+                Jadoo Travel
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/Default/Index">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <div class="header-section">
+            <div class="logo"><i class="fas fa-robot"></i></div>
+            <h1 class="app-title">AI Planet Guide</h1>
+            <p class="app-subtitle">Enter a planet and AI will instantly list places to visit with descriptions. Ready to explore?</p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="card card-main">
+            <div class="card-header">
+                <h3><i class="fas fa-search-location"></i> Start Planet Discovery</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" id="cityForm" class="row g-3 align-items-center">
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-city"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" name="city" placeholder="Enter planet name..." required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">
+                            <i class="fas fa-map-marker-alt me-2"></i> Discover Places
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p>AI is analyzing the planet, please wait...</p>
+        </div>
+
+        <!-- Result Card -->
+        @if (ViewBag.ResultList != null)
+        {
+            <div class="card result-card">
+                <div class="card-header">
+                    <h4><i class="fas fa-list-ul"></i> Places to Visit on @ViewBag.City</h4>
+                </div>
+                <div class="card-body p-0">
+                    <div class="places-list">
+                        @foreach (var item in ViewBag.ResultList)
+                        {
+                            var splitIndex = item.IndexOf(" ");
+                            string title = item;
+                            string desc = "";
+                            if (splitIndex > 0)
+                            {
+                                title = item.Substring(0, splitIndex);
+                                desc = item.Substring(splitIndex).Trim();
+                            }
+
+                            <div class="place-item">
+                                <div class="place-title"><i class="fas fa-map-pin"></i> @title</div>
+                                @if (!string.IsNullOrEmpty(desc))
+                                {
+                                    <div class="place-desc">@desc</div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Error Message -->
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger mt-4">
+                <i class="fas fa-exclamation-triangle me-2"></i> @ViewBag.Error
+            </div>
+        }
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <p class="footer-text">© 2024 Jadoo Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('cityForm').addEventListener('submit', function(){
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('loadingSpinner').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+{
+  "navbar": {
+    "services": "Our Services",
+    "locations": "Locations", 
+    "reservation": "Reservation",
+    "testimonials": "Testimonials",
+    "login": "Login",
+    "getInfo": "Get Info",
+    "language": "Language"
+  },
+  
+  "hero": {
+    "welcome": "Welcome to Interstellar Voyages",
+    "title": "Explore the Universe, Discover New Worlds",
+    "description": "Experience zero gravity, orbit breathtaking planets, and witness the beauty of the cosmos up close.",
+    "watchButton": "Watch the Future"
+  },
+  
+  "services": {
+    "category": "CATEGORY",
+    "title": "We Offer Best Services",
+    "weatherForecast": {
+      "title": "Space Weather Forecast",
+      "description": "Stay safe with real-time cosmic weather reports, from solar storms to asteroid activity."
+    },
+    "orbitalHotels": {
+      "title": "Orbital Hotels", 
+      "description": "Stay in luxury orbital hotels with breathtaking views of Earth and the stars. Zero-gravity dining, sky lounges, and more."
+    },
+    "planetaryExploration": {
+      "title": "Planetary Exploration",
+      "description": "Step on new worlds, explore exotic terrains, and collect cosmic souvenirs."
+    },
+    "cosmicEntertainment": {
+      "title": "Cosmic Entertainment",
+      "description": "From zero-gravity concerts to holographic theaters, experience entertainment like never before in space."
+    }
+  },
+  
+  "destinations": {
+    "subtitle": "Top Selling",
+    "title": "Top Destinations",
+    "moonBase": {
+      "name": "Moon Base Alpha",
+      "duration": "5 Night 6 Day",
+      "price": "150.000 TL",
+      "description": "Walk on the Moon, drive lunar rovers, and stay in the first luxury Moon base."
+    },
+    "marsColony": {
+      "name": "Mars Colony Visit", 
+      "duration": "3 Night 4 Day",
+      "price": "500.000 TL",
+      "description": "Explore Mars habitats, witness the sunset over Olympus Mons, and join the Red Planet adventure."
+    },
+    "spaceStation": {
+      "name": "Space Station Cruise",
+      "duration": "4 Night 5 Day", 
+      "price": "800.000 TL",
+      "description": "Enjoy orbital hotels, zero-gravity dining, and panoramic views of Earth from space."
+    }
+  },
+  
+  "booking": {
+    "easyFast": "Easy and Fast",
+    "title": "Book your next trip in 3 easy steps",
+    "tripPlans": {
+      "orbitalHotelStay": {
+        "title": "Orbital Hotel Stay",
+        "description": "Enjoy 3 nights in a luxury orbital hotel with panoramic Earth views."
+      },
+      "moonWalkExperience": {
+        "title": "Moon Walk Experience", 
+        "description": "Step onto the Moon's surface and drive lunar rovers in guided missions."
+      },
+      "nebulaSightseeingCruise": {
+        "title": "Nebula Sightseeing Cruise",
+        "description": "Embark on a week-long interstellar cruise ship journey through colorful nebulae. Enjoy panoramic observation decks, zero-gravity lounges, and cosmic photography tours."
+      }
+    },
+    "form": {
+      "title": "Make a Reservation",
+      "fullName": "Full Name",
+      "phone": "Phone Number", 
+      "email": "Email Address",
+      "notes": "Additional Notes",
+      "date": "Reservation Date",
+      "bookNow": "Book Now"
+    }
+  },
+  
+  "testimonials": {
+    "subtitle": "Testimonials",
+    "title": "What people say about Us."
+  },
+  
+  "ai": {
+    "description": "Enter a planet, AI will suggest places to visit",
+    "button": "Start Planet Discovery"
+  },
+  
+  "footer": {
+    "company": "Our Company",
+    "about": "About Us", 
+    "careers": "Careers",
+    "mobile": "Mobile",
+    "contact": "Contact",
+    "helpFaq": "Help/FAQ",
+    "press": "Press", 
+    "affiliates": "Affiliates",
+    "more": "More",
+    "airlineFees": "Airline fees",
+    "airline": "Airline", 
+    "lowFareTips": "Low fare tips",
+    "discoverApp": "Discover our app",
+    "copyright": "All Rights Reserved | Jadoo Travel"
+  }
+}
+
+

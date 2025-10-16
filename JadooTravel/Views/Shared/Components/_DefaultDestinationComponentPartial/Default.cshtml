@@ -1,0 +1,73 @@
+﻿@model List<JadooTravel.Dtos.DestinationDtos.ResultDestinationDto>
+@*
+Destination
+*@
+
+<section class="pt-5" id="destination" style="position: relative;">
+    <div class="container">
+        <div class="mb-7 text-center" style="position: relative;">
+            <h5 class="text-secondary" data-i18n="destinations.subtitle">Top Selling</h5>
+            <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize" data-i18n="destinations.title">Top Destinations</h3>
+            <!-- Astronaut image - positioned next to the title -->
+            <div class="position-absolute" style="right: -50px; top: 50%; transform: translateY(-50%); width: 120px; z-index: 10;">
+                <img src="/public/assets/img/dest/ChatGPT-6.png" alt="destination" style="width: 120px; height: auto;" />
+            </div>
+        </div>
+        <div class="row">
+            @if (Model != null && Model.Any())
+            {
+                @foreach(var item in Model)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card overflow-hidden shadow">
+                            <img class="card-img-top" src="/public/assets/img/dest/@item.ImageUrl" alt="@item.CityCountry" />
+                            <div class="card-body py-4 px-3">
+                                <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
+                                    <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">@item.CityCountry</a></h4><span class="fs-1 fw-medium">@item.Price TL</span>
+                                </div>
+                                <div class="d-flex align-items-center"> <img src="/public/assets/img/dest/ChatGPT-4.png"  width="50" alt="navigation" /><span class="fs-0 fw-medium">@item.DayNight</span></div> 
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <!-- Default destinations with translation keys -->
+                <div class="col-md-4 mb-4">
+                    <div class="card overflow-hidden shadow">
+                        <img class="card-img-top" src="/public/assets/img/dest/dest1.jpg" alt="Moon Base Alpha" />
+                        <div class="card-body py-4 px-3">
+                            <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
+                                <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!" data-i18n="destinations.moonBase.name">Moon Base Alpha</a></h4><span class="fs-1 fw-medium" data-i18n="destinations.moonBase.price">150.000 TL</span>
+                            </div>
+                            <div class="d-flex align-items-center"> <img src="/public/assets/img/dest/ChatGPT-4.png"  width="50" alt="navigation" /><span class="fs-0 fw-medium" data-i18n="destinations.moonBase.duration">5 Night 6 Day</span></div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card overflow-hidden shadow">
+                        <img class="card-img-top" src="/public/assets/img/dest/dest2.jpg" alt="Mars Colony Visit" />
+                        <div class="card-body py-4 px-3">
+                            <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
+                                <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!" data-i18n="destinations.marsColony.name">Mars Colony Visit</a></h4><span class="fs-1 fw-medium" data-i18n="destinations.marsColony.price">500.000 TL</span>
+                            </div>
+                            <div class="d-flex align-items-center"> <img src="/public/assets/img/dest/ChatGPT-4.png"  width="50" alt="navigation" /><span class="fs-0 fw-medium" data-i18n="destinations.marsColony.duration">3 Night 4 Day</span></div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card overflow-hidden shadow">
+                        <img class="card-img-top" src="/public/assets/img/dest/dest3.jpg" alt="Space Station Cruise" />
+                        <div class="card-body py-4 px-3">
+                            <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
+                                <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!" data-i18n="destinations.spaceStation.name">Space Station Cruise</a></h4><span class="fs-1 fw-medium" data-i18n="destinations.spaceStation.price">800.000 TL</span>
+                            </div>
+                            <div class="d-flex align-items-center"> <img src="/public/assets/img/dest/ChatGPT-4.png"  width="50" alt="navigation" /><span class="fs-0 fw-medium" data-i18n="destinations.spaceStation.duration">4 Night 5 Day</span></div> 
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div><!-- end of .container-->
+</section>

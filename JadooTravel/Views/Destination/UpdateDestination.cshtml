@@ -1,0 +1,31 @@
+﻿@model JadooTravel.Dtos.DestinationDtos.GetDestinationByIdDto
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <br />
+
+    <form method="post">
+        <input type="hidden" asp-for="DestinationId"/>
+
+        <input type="text" asp-for="CityCountry" placeholder="Enter City and Country" class="form-control" />
+        <br />
+        <input type="text" asp-for="ImageUrl" placeholder="Enter Image Url" class="form-control" />
+        <br />
+        <input type="text" asp-for="Price" placeholder="Enter Price" class="form-control" />
+        <br />
+        <input type="text" asp-for="DayNight" placeholder="Enter Day-Night" class="form-control" />
+        <br />
+        <input type="text" asp-for="Capacity" placeholder="Enter Capacity" class="form-control" />
+        <br />
+        <textarea asp-for="Description" placeholder="Enter Tour Description" rows="5" class="form-control"></textarea>
+        <br />
+        <button class="btn btn-success">Update Destination</button>
+    </form>
+
+</div>

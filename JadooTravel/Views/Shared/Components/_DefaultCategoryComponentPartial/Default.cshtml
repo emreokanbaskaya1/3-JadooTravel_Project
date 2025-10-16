@@ -1,0 +1,72 @@
+﻿@model List<JadooTravel.Dtos.CategoryDtos.ResultCategoryDto>
+@*
+    Category Component
+*@
+<section class="pt-5 pt-md-9" id="service">
+    <div class="container">
+        <div class="position-absolute z-index--1 end-0 d-none d-lg-block">
+            <img src="/public/assets/img/category/ChatGPT-5.png" style="max-width: 160px" alt="service" />
+        </div>
+        <div class="mb-7 text-center">
+            <h5 class="text-secondary" data-i18n="services.category">CATEGORY</h5>
+            <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize" data-i18n="services.title">We Offer Best Services</h3>
+        </div>
+        <div class="row justify-content-center">
+            @if (Model != null && Model.Any())
+            {
+                @foreach(var item in Model)
+                {
+                    <div class="col-lg-3 col-sm-6 mb-6 d-flex align-items-stretch">
+                        <div class="card service-card shadow-hover rounded-3 text-center align-items-center w-100">
+                            <div class="card-body p-xxl-5 p-4">
+                                <img src="/public/assets/img/category/@item.IconUrl" width="75" alt="Service" />
+                                <h4 class="mb-3">@item.CategoryName</h4>
+                                <p class="mb-0 fw-medium">@item.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <!-- Default services with translation keys -->
+                <div class="col-lg-3 col-sm-6 mb-6 d-flex align-items-stretch">
+                    <div class="card service-card shadow-hover rounded-3 text-center align-items-center w-100">
+                        <div class="card-body p-xxl-5 p-4">
+                            <img src="/public/assets/img/category/icon1.svg" width="75" alt="Service" />
+                            <h4 class="mb-3" data-i18n="services.weatherForecast.title">Space Weather Forecast</h4>
+                            <p class="mb-0 fw-medium" data-i18n="services.weatherForecast.description">Stay safe with real-time cosmic weather reports, from solar storms to asteroid activity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-6 d-flex align-items-stretch">
+                    <div class="card service-card shadow-hover rounded-3 text-center align-items-center w-100">
+                        <div class="card-body p-xxl-5 p-4">
+                            <img src="/public/assets/img/category/icon2.svg" width="75" alt="Service" />
+                            <h4 class="mb-3" data-i18n="services.orbitalHotels.title">Orbital Hotels</h4>
+                            <p class="mb-0 fw-medium" data-i18n="services.orbitalHotels.description">Stay in luxury orbital hotels with breathtaking views of Earth and the stars. Zero-gravity dining, sky lounges, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-6 d-flex align-items-stretch">
+                    <div class="card service-card shadow-hover rounded-3 text-center align-items-center w-100">
+                        <div class="card-body p-xxl-5 p-4">
+                            <img src="/public/assets/img/category/icon3.svg" width="75" alt="Service" />
+                            <h4 class="mb-3" data-i18n="services.planetaryExploration.title">Planetary Exploration</h4>
+                            <p class="mb-0 fw-medium" data-i18n="services.planetaryExploration.description">Step on new worlds, explore exotic terrains, and collect cosmic souvenirs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-6 d-flex align-items-stretch">
+                    <div class="card service-card shadow-hover rounded-3 text-center align-items-center w-100">
+                        <div class="card-body p-xxl-5 p-4">
+                            <img src="/public/assets/img/category/icon4.svg" width="75" alt="Service" />
+                            <h4 class="mb-3" data-i18n="services.cosmicEntertainment.title">Cosmic Entertainment</h4>
+                            <p class="mb-0 fw-medium" data-i18n="services.cosmicEntertainment.description">From zero-gravity concerts to holographic theaters, experience entertainment like never before in space.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div><!-- end of .container-->
+</section>

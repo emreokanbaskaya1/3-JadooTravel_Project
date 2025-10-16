@@ -1,0 +1,117 @@
+{
+  "navbar": {
+    "services": "Nos Services",
+    "locations": "Emplacements", 
+    "reservation": "Réservation",
+    "testimonials": "Témoignages",
+    "login": "Connexion",
+    "getInfo": "Obtenir des Infos",
+    "language": "Langue"
+  },
+  
+  "hero": {
+    "welcome": "Bienvenue aux Voyages Interstellaires",
+    "title": "Explorez l'Univers, Découvrez de Nouveaux Mondes",
+    "description": "Expérimentez la gravité zéro, orbitez autour de planètes à couper le souffle et témoignez de la beauté du cosmos de près.",
+    "watchButton": "Regarder l'Avenir"
+  },
+  
+  "services": {
+    "category": "CATÉGORIE",
+    "title": "Nous Offrons les Meilleurs Services",
+    "weatherForecast": {
+      "title": "Prévision Météo Spatiale",
+      "description": "Restez en sécurité avec des rapports météo cosmiques en temps réel, des tempêtes solaires à l'activité des astéroïdes."
+    },
+    "orbitalHotels": {
+      "title": "Hôtels Orbitaux", 
+      "description": "Séjournez dans des hôtels orbitaux de luxe avec des vues époustouflantes de la Terre et des étoiles. Dîners à gravité zéro, salons célestes et plus."
+    },
+    "planetaryExploration": {
+      "title": "Exploration Planétaire",
+      "description": "Marchez sur de nouveaux mondes, explorez des terrains exotiques et collectez des souvenirs cosmiques."
+    },
+    "cosmicEntertainment": {
+      "title": "Divertissement Cosmique",
+      "description": "Des concerts à gravité zéro aux théâtres holographiques, vivez un divertissement comme jamais auparavant dans l'espace."
+    }
+  },
+  
+  "destinations": {
+    "subtitle": "Meilleures Ventes",
+    "title": "Destinations Principales",
+    "moonBase": {
+      "name": "Base Lunaire Alpha",
+      "duration": "5 Nuits 6 Jours",
+      "price": "150.000 TL",
+      "description": "Marchez sur la Lune, conduisez des rovers lunaires et séjournez dans la première base lunaire de luxe."
+    },
+    "marsColony": {
+      "name": "Visite de la Colonie Martienne", 
+      "duration": "3 Nuits 4 Jours",
+      "price": "500.000 TL",
+      "description": "Explorez les habitats martiens, assistez au coucher de soleil sur Olympus Mons et rejoignez l'aventure de la Planète Rouge."
+    },
+    "spaceStation": {
+      "name": "Croisière de Station Spatiale",
+      "duration": "4 Nuits 5 Jours", 
+      "price": "800.000 TL",
+      "description": "Profitez des hôtels orbitaux, des dîners à gravité zéro et des vues panoramiques de la Terre depuis l'espace."
+    }
+  },
+  
+  "booking": {
+    "easyFast": "Facile et Rapide",
+    "title": "Réservez votre prochain voyage en 3 étapes faciles",
+    "tripPlans": {
+      "orbitalHotelStay": {
+        "title": "Séjour à l'Hôtel Orbital",
+        "description": "Profitez de 3 nuits dans un hôtel orbital de luxe avec des vues panoramiques de la Terre."
+      },
+      "moonWalkExperience": {
+        "title": "Expérience de Marche Lunaire", 
+        "description": "Marchez sur la surface de la Lune et conduisez des rovers lunaires dans des missions guidées."
+      },
+      "nebulaSightseeingCruise": {
+        "title": "Croisière Touristique de Nébuleuse",
+        "description": "Embarquez pour un voyage d'une semaine en vaisseau interstellaire à travers des nébuleuses colorées. Profitez de ponts d'observation panoramiques, de salons à gravité zéro et de tours de photographie cosmique."
+      }
+    },
+    "form": {
+      "title": "Faire une Réservation",
+      "fullName": "Nom Complet",
+      "phone": "Numéro de Téléphone", 
+      "email": "Adresse E-mail",
+      "notes": "Notes Supplémentaires",
+      "date": "Date de Réservation",
+      "bookNow": "Réserver Maintenant"
+    }
+  },
+  
+  "testimonials": {
+    "subtitle": "Témoignages",
+    "title": "Ce que les gens disent de nous."
+  },
+  
+  "ai": {
+    "description": "Entrez une planète, l'IA suggérera des lieux à visiter",
+    "button": "Commencer la Découverte Planétaire"
+  },
+  
+  "footer": {
+    "company": "Notre Entreprise",
+    "about": "À Propos", 
+    "careers": "Carrières",
+    "mobile": "Mobile",
+    "contact": "Contact",
+    "helpFaq": "Aide/FAQ",
+    "press": "Presse", 
+    "affiliates": "Affiliés",
+    "more": "Plus",
+    "airlineFees": "Frais de compagnie aérienne",
+    "airline": "Compagnie aérienne", 
+    "lowFareTips": "Conseils tarifs bas",
+    "discoverApp": "Découvrez notre application",
+    "copyright": "Tous Droits Réservés | Jadoo Travel"
+  }
+}

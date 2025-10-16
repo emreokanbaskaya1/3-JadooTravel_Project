@@ -1,0 +1,117 @@
+{
+  "navbar": {
+    "services": "Nuestros Servicios",
+    "locations": "Ubicaciones", 
+    "reservation": "Reservación",
+    "testimonials": "Testimonios",
+    "login": "Iniciar Sesión",
+    "getInfo": "Obtener Información",
+    "language": "Idioma"
+  },
+  
+  "hero": {
+    "welcome": "Bienvenido a Viajes Interestelares",
+    "title": "Explora el Universo, Descubre Nuevos Mundos",
+    "description": "Experimenta la gravedad cero, orbita planetas impresionantes y presencia la belleza del cosmos de cerca.",
+    "watchButton": "Ver el Futuro"
+  },
+  
+  "services": {
+    "category": "CATEGORÍA",
+    "title": "Ofrecemos los Mejores Servicios",
+    "weatherForecast": {
+      "title": "Pronóstico del Clima Espacial",
+      "description": "Mantente seguro con reportes cósmicos en tiempo real, desde tormentas solares hasta actividad de asteroides."
+    },
+    "orbitalHotels": {
+      "title": "Hoteles Orbitales", 
+      "description": "Hospédate en hoteles orbitales de lujo con vistas impresionantes de la Tierra y las estrellas. Cenas de gravedad cero, salones celestiales y más."
+    },
+    "planetaryExploration": {
+      "title": "Exploración Planetaria",
+      "description": "Pisa nuevos mundos, explora terrenos exóticos y recolecta souvenirs cósmicos."
+    },
+    "cosmicEntertainment": {
+      "title": "Entretenimiento Cósmico",
+      "description": "Desde conciertos de gravedad cero hasta teatros holográficos, experimenta entretenimiento como nunca antes en el espacio."
+    }
+  },
+  
+  "destinations": {
+    "subtitle": "Más Vendidos",
+    "title": "Destinos Principales",
+    "moonBase": {
+      "name": "Base Lunar Alpha",
+      "duration": "5 Noches 6 Días",
+      "price": "150.000 TL",
+      "description": "Camina en la Luna, conduce rovers lunares y quédate en la primera base lunar de lujo."
+    },
+    "marsColony": {
+      "name": "Visita a la Colonia de Marte", 
+      "duration": "3 Noches 4 Días",
+      "price": "500.000 TL",
+      "description": "Explora hábitats marcianos, presencia el atardecer sobre Olympus Mons y únete a la aventura del Planeta Rojo."
+    },
+    "spaceStation": {
+      "name": "Crucero de Estación Espacial",
+      "duration": "4 Noches 5 Días", 
+      "price": "800.000 TL",
+      "description": "Disfruta hoteles orbitales, cenas de gravedad cero y vistas panorámicas de la Tierra desde el espacio."
+    }
+  },
+  
+  "booking": {
+    "easyFast": "Fácil y Rápido",
+    "title": "Reserva tu próximo viaje en 3 pasos fáciles",
+    "tripPlans": {
+      "orbitalHotelStay": {
+        "title": "Estadía en Hotel Orbital",
+        "description": "Disfruta 3 noches en un hotel orbital de lujo con vistas panorámicas de la Tierra."
+      },
+      "moonWalkExperience": {
+        "title": "Experiencia de Caminata Lunar", 
+        "description": "Pisa la superficie de la Luna y conduce rovers lunares en misiones guiadas."
+      },
+      "nebulaSightseeingCruise": {
+        "title": "Crucero Turístico de Nebulosa",
+        "description": "Embárcate en un viaje de una semana en nave interestelar a través de nebulosas coloridas. Disfruta cubiertas de observación panorámicas, salones de gravedad cero y tours de fotografía cósmica."
+      }
+    },
+    "form": {
+      "title": "Hacer una Reservación",
+      "fullName": "Nombre Completo",
+      "phone": "Número de Teléfono", 
+      "email": "Dirección de Correo",
+      "notes": "Notas Adicionales",
+      "date": "Fecha de Reservación",
+      "bookNow": "Reservar Ahora"
+    }
+  },
+  
+  "testimonials": {
+    "subtitle": "Testimonios",
+    "title": "Lo que la gente dice sobre nosotros."
+  },
+  
+  "ai": {
+    "description": "Ingresa un planeta, la IA sugerirá lugares para visitar",
+    "button": "Iniciar Descubrimiento Planetario"
+  },
+  
+  "footer": {
+    "company": "Nuestra Empresa",
+    "about": "Acerca de", 
+    "careers": "Carreras",
+    "mobile": "Móvil",
+    "contact": "Contacto",
+    "helpFaq": "Ayuda/FAQ",
+    "press": "Prensa", 
+    "affiliates": "Afiliados",
+    "more": "Más",
+    "airlineFees": "Tarifas de aerolínea",
+    "airline": "Aerolínea", 
+    "lowFareTips": "Consejos de tarifas bajas",
+    "discoverApp": "Descubre nuestra aplicación",
+    "copyright": "Todos los Derechos Reservados | Jadoo Travel"
+  }
+}

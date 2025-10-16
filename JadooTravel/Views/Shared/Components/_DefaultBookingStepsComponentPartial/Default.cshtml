@@ -1,0 +1,112 @@
+﻿@model List<JadooTravel.Dtos.TripPlanDtos.ResultTripPlanDto>
+@*
+Trip Plans & Booking
+*@
+
+<section id="booking">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="mb-4 text-start">
+                    <h5 class="text-secondary" data-i18n="booking.easyFast">Easy and Fast</h5>
+                    <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize" data-i18n="booking.title">Book your next trip in 3 easy steps</h3>
+                </div>
+                
+                @if (Model != null && Model.Any())
+                {
+                    int stepNumber = 1;
+                    string[] colors = {"bg-primary", "bg-danger", "bg-info", "bg-warning", "bg-success"};
+                    
+                    @foreach (var item in Model.Take(3))
+                    {
+                        string translationKey = "";
+                        // Map database titles to translation keys
+                        if (item.Title.Contains("Orbital Hotel"))
+                        {
+                            translationKey = "booking.tripPlans.orbitalHotelStay";
+                        }
+                        else if (item.Title.Contains("Moon Walk"))
+                        {
+                            translationKey = "booking.tripPlans.moonWalkExperience";
+                        }
+                        else if (item.Title.Contains("Nebula"))
+                        {
+                            translationKey = "booking.tripPlans.nebulaSightseeingCruise";
+                        }
+                        
+                        <div class="d-flex align-items-start mb-5">
+                            <div class="@colors[(stepNumber-1) % colors.Length] me-sm-4 me-3 p-3" style="border-radius: 13px">
+                                <img src="/public/assets/img/steps/@item.IconUrl" width="22" alt="@item.Title" />
+                            </div>
+                            <div class="flex-1">
+                                <h5 class="text-secondary fw-bold fs-0" data-i18n="@(translationKey).title">@item.Title</h5>
+                                <p data-i18n="@(translationKey).description">@item.Description</p>
+                            </div>
+                        </div>
+                        stepNumber++;
+                    }
+                }
+                else
+                {
+                    <!-- Default steps with translation keys -->
+                    <div class="d-flex align-items-start mb-5">
+                        <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px">
+                            <img src="/public/assets/img/steps/ChatGPT-1.png" width="22" alt="steps" />
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="text-secondary fw-bold fs-0" data-i18n="booking.tripPlans.orbitalHotelStay.title">Orbital Hotel Stay</h5>
+                            <p data-i18n="booking.tripPlans.orbitalHotelStay.description">Enjoy 3 nights in a luxury orbital hotel with panoramic Earth views.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-5">
+                        <div class="bg-danger me-sm-4 me-3 p-3" style="border-radius: 13px">
+                            <img src="/public/assets/img/steps/ChatGPT-2.png" width="22" alt="steps" />
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="text-secondary fw-bold fs-0" data-i18n="booking.tripPlans.moonWalkExperience.title">Moon Walk Experience</h5>
+                            <p data-i18n="booking.tripPlans.moonWalkExperience.description">Step onto the Moon's surface and drive lunar rovers in guided missions.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-5">
+                        <div class="bg-info me-sm-4 me-3 p-3" style="border-radius: 13px">
+                            <img src="/public/assets/img/steps/ChatGPT-3.png" width="22" alt="steps" />
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="text-secondary fw-bold fs-0" data-i18n="booking.tripPlans.nebulaSightseeingCruise.title">Nebula Sightseeing Cruise</h5>
+                            <p data-i18n="booking.tripPlans.nebulaSightseeingCruise.description">Embark on a week-long interstellar cruise ship journey through colorful nebulae. Enjoy panoramic observation decks, zero-gravity lounges, and cosmic photography tours.</p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center align-items-start">
+                <form method="post" action="/Reservation/CreateReservation" class="w-100 p-4 shadow rounded bg-white" style="max-width: 500px;">
+                    <h3 class="mb-4 text-center fw-bold" data-i18n="booking.form.title">Make a Reservation</h3>
+
+                    <div class="mb-3">
+                        <input type="text" name="FullName" class="form-control form-control-lg" data-i18n="booking.form.fullName" placeholder="Full Name" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="tel" name="Telephone" class="form-control form-control-lg" data-i18n="booking.form.phone" placeholder="Phone Number" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" name="Email" class="form-control form-control-lg" data-i18n="booking.form.email" placeholder="Email Address" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea name="Notes" class="form-control form-control-lg" rows="4" data-i18n="booking.form.notes" placeholder="Additional Notes"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="datetime-local" name="ReservationDate" class="form-control form-control-lg" required />
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-info btn-lg fw-bold" data-i18n="booking.form.bookNow">Book Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!-- end of .container-->
+</section>

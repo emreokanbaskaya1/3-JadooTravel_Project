@@ -1,0 +1,42 @@
+﻿@model List<JadooTravel.Dtos.CategoryDtos.ResultCategoryDto>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Category Name</th>
+            <th>Description</th>
+            <th>IconUrl</th>
+            <th>Status</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+        @foreach(var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Description</td>
+                <td>@item.IconUrl</td>
+                <td>@item.Status</td>
+                <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Delete</a></td>
+                <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-success">Update</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Category/CreateCategory/" class="btn btn-info">Create New Category</a>
+
+</div>

@@ -1,0 +1,27 @@
+@model JadooTravel.Dtos.TripPlanDtos.GetTripPlanByIdDto
+@{
+    ViewData["Title"] = "UpdateTripPlan";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <br />
+
+    <form method="post">
+        <input type="hidden" asp-for="TripPlanId" />
+
+        <input type="text" asp-for="Title" placeholder="Enter Title" class="form-control" />
+        <br />
+        <textarea asp-for="Description" placeholder="Enter Trip Plan Description" rows="5" class="form-control"></textarea>
+        <br />
+        <input type="text" asp-for="IconUrl" placeholder="Enter Icon Url" class="form-control" />
+        <br />
+        
+        <br />
+        <button class="btn btn-success">Update Trip Plan</button>
+    </form>
+
+</div>
