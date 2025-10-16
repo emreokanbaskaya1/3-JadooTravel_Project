@@ -158,7 +158,11 @@ You can get OpenAI-powered travel recommendations by entering a city name from t
 The project has a modern and responsive user interface. The Spike Bootstrap theme is used.
 
 
-https://github.com/user-attachments/assets/287b3b10-5a6b-4a66-89ab-da5e6298dbc5
+
+
+https://github.com/user-attachments/assets/df8a92dd-eed4-480c-9567-0fe09cd85705
+
+
 
 
 
